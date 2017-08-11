@@ -17,7 +17,7 @@ export class EventListComponent implements OnInit {
       {
         category: 'Political',
         description: 'Super meeting',
-        organizaer: 'Narod',
+        organizer: 'Narod',
         participantsCount: 1203,
         imgURL: '../assets/img/meet3.jpg',
         name: 'Occupy Wall Street',
@@ -26,4 +26,7 @@ export class EventListComponent implements OnInit {
         city: 'Moscow',
         address: 'Saharova pr'
       }
-    
+    ];
+  }
+
+}

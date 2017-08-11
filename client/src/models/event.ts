@@ -1,7 +1,7 @@
 export interface EventInfo {
     category: string;
     description: string;
-    organizaer: string;
+    organizer: string;
     participantsCount: number;
     imgURL: string;
     name: string;
