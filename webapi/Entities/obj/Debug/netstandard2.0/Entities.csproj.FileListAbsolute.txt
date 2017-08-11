@@ -1,0 +1,8 @@
+c:\Sources\Spikes\eventy-app\webapi\Entities\obj\Debug\netstandard2.0\Entities.csproj.CoreCompileInputs.cache
+c:\Sources\Spikes\eventy-app\webapi\Entities\obj\Debug\netstandard2.0\Entities.AssemblyInfoInputs.cache
+c:\Sources\Spikes\eventy-app\webapi\Entities\obj\Debug\netstandard2.0\Entities.AssemblyInfo.cs
+c:\Sources\Spikes\eventy-app\webapi\Entities\bin\Debug\netstandard2.0\Entities.deps.json
+c:\Sources\Spikes\eventy-app\webapi\Entities\bin\Debug\netstandard2.0\Entities.dll
+c:\Sources\Spikes\eventy-app\webapi\Entities\bin\Debug\netstandard2.0\Entities.pdb
+c:\Sources\Spikes\eventy-app\webapi\Entities\obj\Debug\netstandard2.0\Entities.dll
+c:\Sources\Spikes\eventy-app\webapi\Entities\obj\Debug\netstandard2.0\Entities.pdb
