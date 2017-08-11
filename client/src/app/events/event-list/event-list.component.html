@@ -1,0 +1,36 @@
+
+<article class="card" *ngFor="let event of events">
+  <header class="card-header">
+    <div class="card-category">
+      <div class="{{event.category}}" title=""></div>
+    </div>
+    <div class="participants">
+      <div class="icon-people"></div>
+      <div class="participants-count">{{event.participantsCount}}</div>
+    </div>
+  </header>
+  <img alt="Avatar" class="card-image" style="width:100%;" src="{{event.imgURL}}">
+  <section class="card-content">
+    <h3 class="card-name">{{event.name}}</h3>
+    <h5 class="card-date">{{event.date}}</h5>
+    <div class="share" *ngFor="let externalLink of externalLinks">
+      <a rel="external" target="_blank" class="{{externalLink.type}}" href="{{externalLink.URL}}" title="{{externalLink.title}}"></a>
+    </div>
+    <a class="text-anchor" rel="external" target="_blank" title="See the event" href="">
+      <p class="card-description">{{event.description}}</p>
+    </a>
+    <div class="card-bottom-info">
+      <a class="organizer-anchor" rel="external" target="_blank" title="View Organizer Profile" href="">
+                     <i class="icon-organizer"></i>       
+                     <p class="card-organizer">{{event.organizer}}</p>
+                </a>
+      <a class="address-anchor" rel="external" target="_blank" title="Open map" href="">
+                        <i class="location-icon"></i>
+                        <div  class="card-address">
+                            <p>{{event.City}}, {{event.country }}</p>
+                            <p>{{event.address}}</p>
+                        </div>
+                </a>
+    </div>
+  </section>
+</article>
