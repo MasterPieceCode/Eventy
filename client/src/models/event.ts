@@ -9,4 +9,15 @@ export interface EventInfo {
     city: string;
     country: string;
     address: string;
+    externalLinks: ExternalLink[];
+}
+
+
+export interface ExternalLink {
+    title: string;
+    URL: string;
+    type: string;
+}
+
+export enum ExternalLinkType {
 }
