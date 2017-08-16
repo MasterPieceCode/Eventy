@@ -3,16 +3,18 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { EventListComponent, EventDetailsComponent } from './events/events';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import {EventsModule} from './events/events.module';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    EventListComponent,
-    EventDetailsComponent
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
+    EventsModule,
     AppRoutingModule
   ],
   providers: [],

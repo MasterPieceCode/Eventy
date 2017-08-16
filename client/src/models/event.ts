@@ -10,8 +10,9 @@ export interface EventInfo {
     country: string;
     address: string;
     externalLinks: ExternalLink[];
+    isParticipant?: boolean;
+    isOrganizer?: boolean;
 }
-
 
 export interface ExternalLink {
     title: string;

@@ -37,18 +37,46 @@
     padding: 0px 5px;
 }
 
-.card-category {
+.organizer
+{
     align-self: center;
+    margin-left: 5px;
+}
+
+.icon-participant{
+    &:before
+    {
+        @extend .material-icons;
+        content: "check_circle";
+        color: yellowgreen;
+    }
+}
+
+.unparticipate
+{
+    align-self: center;
+    margin-left: 5px;
+}
+
+.icon-face{
+    &:before
+    {
+        @extend .material-icons;
+        content: "grade";
+        color: green;
+    }
+}
+
+.card-category {
+   align-self: center;
 }
 
 .participants {
     display: -webkit-inline-flex;
-    width: 100%;
-    -webkit-box-pack: end;
+    margin-left: auto;
     justify-content: flex-end;
-    align-self: center;
+    align-self: center;   
 }
-
 .icon-people{
     @extend .material-icons;
     
@@ -110,7 +138,7 @@
 
      > .political:before {
         content: "record_voice_over";
-        color: brown;
+        color: darkslategray;
     }
 
     >.ecology:before {
