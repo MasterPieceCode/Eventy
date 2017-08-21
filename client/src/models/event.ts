@@ -12,6 +12,7 @@ export interface EventInfo {
     externalLinks: ExternalLink[];
     isParticipant?: boolean;
     isOrganizer?: boolean;
+    updates?: EventUpdate[];
 }
 
 export interface ExternalLink {
@@ -21,4 +22,9 @@ export interface ExternalLink {
 }
 
 export enum ExternalLinkType {
+}
+
+export interface EventUpdate {
+    date: string;
+    content: string;
 }

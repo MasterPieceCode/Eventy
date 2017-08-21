@@ -7,7 +7,7 @@
     -webkit-column-gap: 0px;
     column-gap: 15px;
 
-    @media only screen and (max-width: 480px) {
+    @media only screen and (max-width: 768px) {
      column-count: 1;
      -webkit-column-count:1;
     }
@@ -28,7 +28,7 @@
 }
 
 .card-header {
-    border-bottom: 1px solid darkblue;
+    border-bottom: $separator;
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
     display: inline-flex;
@@ -63,7 +63,7 @@
     {
         @extend .material-icons;
         content: "grade";
-        color: green;
+        color: gold;
     }
 }
 
@@ -77,13 +77,8 @@
     justify-content: flex-end;
     align-self: center;   
 }
-.icon-people{
-    @extend .material-icons;
-    
-    &::before{
-        content: "people";
-    }
 
+.icon-people{
     margin-right: 5px;
     align-self: center;
 }
@@ -93,7 +88,7 @@
     font-size: 16px;
 }
 
-.card-image
+.card-imagecard-image
 {
     margin: 5px 0px;
 }
@@ -152,14 +147,11 @@
     }
 }
 
-.text-anchor, .address-anchor, .organizer-anchor {
-    text-decoration: none;
-}
-
 .card-description {
     font-size: 14px;
     font-style: unset;
     color: black;
+    cursor: pointer;
 }
 
 .card-bottom-info{
@@ -170,20 +162,13 @@
 }
 
 .organizer-anchor {
+    display: inline-flex;
     margin-right: auto;
     margin-top: 0px;
     margin-bottom: 0px;
     padding: 0px;
-    -ms-flex-item-align: center;
-    -ms-grid-row-align: center;
-    align-self: center;
-}
-
-.icon-organizer:before {
-    @extend .material-icons;
-    
-    content: "account_circle";
-    color: lightblue;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .card-organizer{
@@ -192,30 +177,7 @@
     line-height: 10px;
     align-self: stretch;
     margin: 0px;
-    font-style: unset;
-    color: black;
 }
-
-.address-anchor{
-    display: inline-flex;
-    align-self: center;
-    -ms-flex-line-pack: end;
-    align-content: flex-end;
-}
-
-.location-icon{
-    -ms-flex-item-align: center;
-    -ms-grid-row-align: center;
-    align-self: center;
-
-    &:before
-    {
-        @extend .material-icons;
-        content: "location_on";
-        color: salmon;
-    }
-}
-
 
 .card-address {
     align-self: center;
@@ -226,7 +188,5 @@
         line-height: 10px;
         align-self: stretch;
         margin: 0px;
-        font-style: unset;
-        color: black;
     }    
 }

@@ -29,11 +29,11 @@
         <a *ngFor="let externalLink of event.externalLinks" rel="external" target="_blank" class="{{externalLink.type}}" href="{{externalLink.URL}}"
           title="{{externalLink.title}}"></a>
       </div>
-      <a class="text-anchor" rel="external" target="_blank" title="See the event" href="">
+      <a class="text-anchor" rel="external" target="_self" title="See the event" (click)="onSelectEvent(event)">
         <p class="card-description">{{event.description}}</p>
       </a>
       <div class="card-bottom-info">
-        <a class="organizer-anchor" rel="external" target="_blank" title="View Organizer Profile" href="">
+        <a class="organizer-anchor" rel="external" target="_parent" title="View Organizer Profile" href="">
           <i class="icon-organizer"></i>       
           <p class="card-organizer">{{event.organizer}}</p>
         </a>

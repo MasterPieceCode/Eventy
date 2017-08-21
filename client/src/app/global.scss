@@ -1,3 +1,5 @@
+$separator: 1px solid darkblue;
+
 .material-icons {
   font-family: 'Material Icons';
   font-weight: normal;
@@ -21,4 +23,57 @@
 
   /* Support for IE. */
   font-feature-settings: 'liga';
+}
+
+.text-anchor, .address-anchor, .organizer-anchor {
+    text-decoration: none;
+
+    *
+    {
+        font-style: unset;
+        color: black;
+    }
+}
+
+.location-icon{
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
+    align-self: center;
+
+    &:before
+    {
+        @extend .material-icons;
+        content: "location_on";
+        color: salmon;
+        font-size: inherit;
+    }
+}
+
+.address-anchor{
+    display: inline-flex;
+    align-self: center;
+    -ms-flex-line-pack: end;
+    align-content: flex-end;
+}
+
+.icon-organizer
+{
+  align-self: center;
+  
+ &:before {
+    font-size: inherit;
+    
+    @extend .material-icons;
+    
+    content: "account_circle";
+    color: lightblue;
+}  
+}
+
+.icon-people{
+    @extend .material-icons;
+    
+    &::before{
+        content: "people";
+    }
 }

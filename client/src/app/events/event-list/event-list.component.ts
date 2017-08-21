@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { EventInfo, ExternalLink } from '../../../models/event';
 import {HttpClient} from '@angular/common/http';
+import {Router} from '@angular/router';
 
 import { Observable } from 'rxjs/rx';
 import 'rxjs/add/operator/map';
@@ -14,7 +15,7 @@ export class EventListComponent implements OnInit {
 
   public events: Observable<EventInfo[]>;
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private router: Router) { }
 
   ngOnInit() {
     this.events = this.http.get('/assets/events.json', {responseType: 'json'})
@@ -26,4 +27,9 @@ export class EventListComponent implements OnInit {
          } );
         return eventInfo;
       }); }
+
+  public onSelectEvent(event: EventInfo): Promise<boolean> {
+    console.log('');
+      return this.router.navigate(['/eventDetails', event], {skipLocationChange: true});
+  }
 }

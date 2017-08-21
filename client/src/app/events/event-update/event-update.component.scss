@@ -1,0 +1,35 @@
+$border-color:  lightgrey;
+
+.update-main
+{
+    border: 1px solid $border-color;
+    margin-bottom: 25px;
+    width: 50%;
+    border-radius: 5px;
+    
+}
+
+.update-header
+{
+    border-bottom: 1px solid $border-color;
+    background: darkgr;;
+    margin: 0px;
+    color: darkgray;
+    height: 30px;
+    vertical-align: middle;
+    border-radius: 5px 5px 0 0;
+    font-size: small;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.update-date
+{
+    text-align: right;
+    align-self:  center;
+}
+
+#update-content
+{
+    padding: 5px;
+}

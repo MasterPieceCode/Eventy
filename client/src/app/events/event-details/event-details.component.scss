@@ -1,0 +1,122 @@
+@import '../shareable';
+@import '../../global';
+
+
+.event-header
+{
+    text-align: center;
+}
+
+.event-organizer
+{
+    text-align: center;
+}
+
+.event-description
+{
+    width: 70%;
+    > p
+    {
+    font-size: 20px;
+        line-height: 40px;
+    }
+    margin-right: 40px;
+}
+
+.content
+{
+    margin-left: 10%;
+    display: flex;
+    
+}
+
+.event-attributes{
+  //  float: right;
+  width: 20%;
+  box-sizing: content-box;
+  *{
+    text-align: center;
+  }
+}
+
+.event-image
+{
+    margin-bottom: 10px;
+    max-width:100%; 
+    margin: auto; 
+    display: block
+}
+
+.donate-link
+{
+    display:inline-block;
+}
+
+.update-content{
+    border: 1px solid saddlebrown;
+}
+
+.address-anchor{
+    line-height: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+.location-icon
+{
+    font-size: 30px;
+    margin-right: 10px;
+    align-content: flex-start;
+    font-weight: bold;
+}
+
+.icon-people{
+    color: cadetblue;
+    margin-right: 10px;
+    align-content: flex-start;
+}
+
+.icon-organizer{
+    font-size: 40px;
+}
+
+.organizer-anchor {
+    display: flex;
+    justify-content: center;
+}
+
+.participants{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+
+ header{
+        border-bottom:  $separator;
+        margin-bottom: 10px;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+    .organizer-name{
+        align-self: center;
+        font-size: 25px;
+        margin-left: 10px;
+    }
+
+.event-description
+{
+   
+}
+
+.event-date{
+    font-size:large;
+    margin: 0px;
+}
+
+.event-header{
+    font-size: 40px;
+}
