@@ -1,0 +1,10 @@
+<h5>
+  Registarion dynamic
+</h5>
+<svg>
+   <!--y axis-->
+  <line x1="0" y1="0" x2="0" y2="100%"/>
+   <!--x axis-->
+   <line x1="0" y1="100%" x2="100%" y2="100%"/>
+  <line *ngFor='let pos of positions' [attr.x1]="pos.x1 + '%'" [attr.y1.%]="pos.y1 + '%'" [attr.x2.%]="pos.x2 + '%'" [attr.y2.%]="pos.y2 + '%'"/>
+</svg>

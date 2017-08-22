@@ -31,7 +31,6 @@
 }
 
 .event-attributes{
-  //  float: right;
   width: 20%;
   box-sizing: content-box;
   *{
@@ -67,7 +66,6 @@
     font-size: 30px;
     margin-right: 10px;
     align-content: flex-start;
-    font-weight: bold;
 }
 
 .icon-people{
@@ -117,6 +115,13 @@
     margin: 0px;
 }
 
-.event-header{
+.event-header
+{
     font-size: 40px;
+}
+
+app-registration-chart
+{
+    display: block;
+    margin-top: 15px;
 }

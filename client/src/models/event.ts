@@ -28,3 +28,7 @@ export interface EventUpdate {
     date: string;
     content: string;
 }
+
+export interface Participant {
+    registratedOn: Date;
+}

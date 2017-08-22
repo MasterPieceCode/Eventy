@@ -4,13 +4,14 @@ import {HttpClientModule} from '@angular/common/http';
 
 import {EventsRoutingModule} from './events-routing.module';
 
-import { EventListComponent, EventDetailsComponent, EventUpdateComponent } from './events';
+import { EventListComponent, EventDetailsComponent, EventUpdateComponent, RegistrationChartComponent } from './events';
 
 @NgModule({
   declarations: [
     EventListComponent,
     EventDetailsComponent,
-    EventUpdateComponent
+    EventUpdateComponent,
+    RegistrationChartComponent
   ],
   imports: [
     BrowserModule,
