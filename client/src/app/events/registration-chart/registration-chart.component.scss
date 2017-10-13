@@ -1,7 +1,60 @@
 line
 {
     stroke: lightseagreen ;
-    stroke-width:1
+    stroke-width:1;
 }
 
+@keyframes dash {
+    from {
+      stroke-dashoffset: 1000;
+    }
+    to {
+      stroke-dashoffset: 0;
+    }
+}
 
+.path {
+    stroke-dasharray: 1000;
+    animation: dash 5s linear;
+  }
+
+  circle{
+      fill: lightseagreen;
+      stroke: lightseagreen;
+      &:hover {
+        stroke-width: 10;
+    }
+  }
+
+  .tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
+
+   #tooltiptext {
+    text-align: center;
+    visibility: visible;
+    z-index: 1;
+    font-size: 14px;
+    display: block;
+}
+
+.label
+{
+    stroke-width: 0.4;
+    stroke: lightseagreen ;
+}
+.tooltip:hover
+{
+    @at-root .tooltiptext{
+        visibility: visible;
+                
+} 
+}
+
+.graph
+{
+    height: 150px;
+    width: 350px;
+}

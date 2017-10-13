@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Renderer2, ElementRef } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Participant} from '../../../models/event';
 
@@ -14,8 +14,11 @@ import 'rxjs/add/operator/map';
 export class RegistrationChartComponent implements OnInit {
 
   positions: any[] = [];
+  maxParticipants: number;
+  startDate: Date;
+  endDate: Date;
 
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient, private renderer: Renderer2, private el: ElementRef) {
   }
 
   ngOnInit() {
@@ -63,9 +66,15 @@ export class RegistrationChartComponent implements OnInit {
             };
           })
           .value();
-
+        
+          this.maxParticipants = max;
+          this.startDate = earliest;
+          this.endDate = latest;        
 
            console.log(grouped);
+
+          const minValue = 90;
+          const maxValue = 90;
 
           const duration = latest.valueOf() - earliest.valueOf();
           const count = max - min;
@@ -80,17 +89,31 @@ export class RegistrationChartComponent implements OnInit {
               const newPos = {
                 x1: prevPos.x2,
                 y1: prevPos.y2,
-                x2: 100 * ((new Date(g.registratedOn).valueOf() - earliest.valueOf())) / duration,
-                y2: 100 * (1 - (g.count - min) / count)
+                x2: 90 * ((new Date(g.registratedOn).valueOf() - earliest.valueOf())) / duration,
+                y2: Math.max(100 * (1 - (g.count - min) / count), 10),
+                registration: `${g.count} people on ${new Date(g.registratedOn).toDateString()}`
               };
 
               this.positions.push(newPos);
 
               prevPos = newPos;
-              
+             
               console.log(prevPos);
           });
     console.log(this.positions);
       });
+  }
+
+  public onHoverPath(registration: string): void {
+    this.setTooltipText(registration);
+  }
+
+  public onHoverEnds(): void  {
+    this.setTooltipText('Hover bold spots to see dynamics');
+  }
+
+  private setTooltipText(text: string): void {
+    const tooltiptext = this.el.nativeElement.querySelector('#tooltiptext');
+    this.renderer.setProperty(tooltiptext, 'innerText', text);
   }
 }

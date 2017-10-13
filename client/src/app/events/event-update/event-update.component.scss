@@ -4,6 +4,11 @@ $border-color:  lightgrey;
 {
     border: 1px solid $border-color;
     margin-bottom: 25px;
+    
+    @media only screen and (max-width: 768px) {
+        width: 80%;
+    }
+
     width: 50%;
     border-radius: 5px;
     

@@ -1,10 +1,19 @@
 <h5>
   Registarion dynamic
 </h5>
-<svg>
-   <!--y axis-->
-  <line x1="0" y1="0" x2="0" y2="100%"/>
-   <!--x axis-->
-   <line x1="0" y1="100%" x2="100%" y2="100%"/>
-  <line *ngFor='let pos of positions' [attr.x1]="pos.x1 + '%'" [attr.y1.%]="pos.y1 + '%'" [attr.x2.%]="pos.x2 + '%'" [attr.y2.%]="pos.y2 + '%'"/>
+<span id="tooltiptext">Hover bold spots to see dynamics</span>
+<svg class="graph" viewBox="-20 -10 350 100">
+  <!--y axis-->
+  <line x1="0" y1="0" x2="0" y2="100%" />
+  <!--x axis-->
+  <line x1="0" y1="100%" x2="100%" y2="100%"/>
+  <text class="label" x="0" y="-10" font-size="8">{{maxParticipants}}</text>
+  <text class="label" x="-20" y="110%" font-size="8">{{startDate | date:'mediumDate'}}</text>
+  <text class="label" x="80%" y="110%" font-size="8">{{endDate| date:'mediumDate'}}</text>
+  <g *ngFor='let pos of positions'>
+    <line class="path" [attr.x1]="pos.x1 + '%'" [attr.y1.%]="pos.y1 + '%'" [attr.x2.%]="pos.x2 + '%'" [attr.y2.%]="pos.y2 + '%'">
+    </line>
+    <circle class="tooltip" [attr.cx.%]="pos.x2 + '%'" r="2" [attr.cy.%]="pos.y2 + '%'" (mouseleave)='onHoverEnds()' (mouseover)='onHoverPath(pos.registration)'>
+    </circle>
+  </g>
 </svg>
