@@ -1,38 +1,49 @@
+$chart-color: lightseagreen;
+$dash-count: 1000;
+
 line
 {
-    stroke: lightseagreen ;
-    stroke-width:1;
+    stroke: $chart-color;
+    stroke-width:  1;
 }
 
-@keyframes dash {
-    from {
-      stroke-dashoffset: 1000;
+@keyframes dash
+{
+    from
+    {
+        stroke-dashoffset: $dash-count;
     }
-    to {
-      stroke-dashoffset: 0;
+    to
+    {
+        stroke-dashoffset: 0;
     }
 }
 
-.path {
-    stroke-dasharray: 1000;
+.path
+{
+    stroke-dasharray: $dash-count;
     animation: dash 5s linear;
-  }
+}
 
-  circle{
-      fill: lightseagreen;
-      stroke: lightseagreen;
-      &:hover {
+circle
+{
+    fill: $chart-color;
+    stroke: $chart-color;
+    &:hover
+     {
         stroke-width: 10;
     }
   }
 
-  .tooltip {
+.tooltip
+{
     position: relative;
     display: inline-block;
     border-bottom: 1px dotted black;
 }
 
-   #tooltiptext {
+#tooltiptext
+{
     text-align: center;
     visibility: visible;
     z-index: 1;
@@ -43,18 +54,16 @@ line
 .label
 {
     stroke-width: 0.4;
-    stroke: lightseagreen ;
-}
-.tooltip:hover
-{
-    @at-root .tooltiptext{
-        visibility: visible;
-                
-} 
+    stroke: $chart-color;
 }
 
 .graph
 {
     height: 150px;
     width: 350px;
+}
+
+.header
+{
+    margin: 15px;
 }

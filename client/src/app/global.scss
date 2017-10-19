@@ -1,4 +1,4 @@
-$separator: 1px solid darkblue;
+$separator: 1px solid rgb(112, 103, 97);
 
 .material-icons {
   font-family: 'Material Icons';
@@ -25,17 +25,35 @@ $separator: 1px solid darkblue;
   font-feature-settings: 'liga';
 }
 
-.text-anchor, .address-anchor, .organizer-anchor {
+.anchor-button
+{
     text-decoration: none;
-
-    *
-    {
-        font-style: unset;
-        color: black;
-    }
+    
+        *
+        {
+            font-style: unset;
+            color: black;
+        }
 }
 
-.location-icon{
+.anchor-organizer 
+{
+     @extend .anchor-button;
+}
+
+.anchor-address
+{
+    @extend .anchor-button;
+    
+    display: inline-flex;
+    align-self: center;
+    -ms-flex-line-pack: end;
+    align-content: flex-end;
+    justify-content: flex-end;
+}
+
+.icon-location
+{
     -ms-flex-item-align: center;
     -ms-grid-row-align: center;
     align-self: center;
@@ -49,31 +67,23 @@ $separator: 1px solid darkblue;
     }
 }
 
-.address-anchor{
-    display: inline-flex;
-    align-self: center;
-    -ms-flex-line-pack: end;
-    align-content: flex-end;
-}
-
 .icon-organizer
 {
-  align-self: center;
+    align-self: center;
   
- &:before {
-    font-size: inherit;
-    
-    @extend .material-icons;
-    
-    content: "account_circle";
-    color: lightblue;
-}  
+    &:before 
+    {
+        @extend .material-icons;
+        font-size: inherit;
+        content: "account_circle";
+        color: lightblue;
+    } 
 }
 
 .icon-people{
-    @extend .material-icons;
-    
-    &::before{
+    &::before
+    {
+        @extend .material-icons;
         content: "people";
     }
 }

@@ -1,7 +1,7 @@
 <div>
     <header>
       <h1 class="event-header">{{event.name}}</h1>
-        <a class="organizer-anchor" rel="external" target="_parent" title="View Organizer Profile" href="">
+        <a class="anchor-organizer" rel="external" target="_parent" title="View Organizer Profile" href="">
           <i class="icon-organizer"></i>       
           <p class="organizer-name">{{event.organizer}}</p>
         </a>
@@ -21,31 +21,29 @@
     </div>
     <div class="event-attributes">
       <p class="event-date">{{event.date | date: 'd MMM y, HH:mm'}} </p>
-      <a class="address-anchor" rel="external" target="_blank" title="Open map" href="">
-                        <i class="location-icon"></i>
-                        <div  class="card-address">
-                            <p>{{event.address}}, {{event.city}}, {{event.country}}</p>
-                        </div>
-                </a>
-      <div class="participants">
-        <div class="icon-people"></div>
-        <div class="participants-count">{{event.participantsCount}} participants</div>
+      <a class="icon-with-text" rel="external" target="_blank" title="Open map" href="">
+        <i class="icon-location"></i>
+        <p>{{event.address}}, {{event.city}}, {{event.country}}</p>
+      </a>
+      <div class="icon-with-text">
+        <i class="icon-people"></i>
+        <p>{{event.participantsCount}} participants</p>
       </div>
       <app-registration-chart></app-registration-chart>
       <div class="share">
         <p>Share:</p>
         <div class="share-icons">
-          <a rel="external" style="display: inline-block" target="_blank" class="facebook-share-url" href="youtube.com" title="Twitter"></a>
-          <a rel="external" style="display: inline-block" target="_blank" class="twitter-share-url" href="youtube.com" title="Twitter"></a>
-          <a rel="external" style="display: inline-block" target="_blank" class="telegram-share-url" href="youtube.com" title="Twitter"></a>
-          <a rel="external" style="display: inline-block" target="_blank" class="vk-share-url" href="youtube.com" title="Twitter"></a>
-          <a rel="external" style="display: inline-block" target="_blank" class="ok-share-url" href="youtube.com" title="Twitter"></a>
+          <a rel="external" target="_blank" class="facebook-share-url" href="youtube.com" title="Twitter"></a>
+          <a rel="external" target="_blank" class="twitter-share-url" href="youtube.com" title="Twitter"></a>
+          <a rel="external" target="_blank" class="telegram-share-url" href="youtube.com" title="Twitter"></a>
+          <a rel="external" target="_blank" class="vk-share-url" href="youtube.com" title="Twitter"></a>
+          <a rel="external" target="_blank" class="ok-share-url" href="youtube.com" title="Twitter"></a>
         </div>
       </div>
       <div class="donate">
         <p>Donate:</p>
         <div class="share-icons">
-          <a class="donate-link" style="margin-right: 20px" rel="external" target="_blank" href="youtube.com" title="Paypal">
+          <a class="donate-link" rel="external" target="_blank" href="youtube.com" title="Paypal">
            <img alt="Donate" class="event-image" src="../assets/img/paypal_donate.gif">
           </a>
           <a class="donate-link" rel="external" target="_blank" href="youtube.com" title="Paypal">
@@ -53,12 +51,12 @@
           </a>
         </div>
       </div>
-      <button id="participate-button" type="submit">
+      <a id="participate-button" href="" rel="external" target="_parent" title="Click to participate">
         <div class="participate-container">
             <i class="icon-participate"></i>       
             <p>Participate</p>
         </div>
-      </button>      
+      </a>      
     </div>
   </div>
 </div>
