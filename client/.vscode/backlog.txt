@@ -1,0 +1,55 @@
+EPIC: Event Detail Page
+    View Mode
+        Add Updates Tab (for event organizers only)
+        Add Comment Tab (for every user with moderation privillege for organizers)
+        Add Twitter Feed Tab (pull all tweets by hash tag)
+        For organizers:
+         hide "Participate button
+         add "Withdraw Event" button
+         add "Edit Event" button
+         allow moderate comments
+         allow adding/deleting updates
+    Create Mode
+        Fields to be filled:
+            Event Name
+            Event Date
+            Event Place. Allow type or google map. Allow adding routes.
+            Event Visibility: Private/Public
+            Event Type (maybe): Concert, Birthdaty party, meeting and etc.
+            Co-orginizers: invite people to become co-orginizer of the event
+            Shares:
+                Twiiter
+                Facebook
+                VK
+                OK
+                Telegram
+                ?
+            Allow Twitter Feed (Yes/No)
+                If Yes, then Twitter Hashtag must be provided
+            Allow comments (Yes/No)
+        Description:
+            Word type text processor to add description (formating/images, font and ect)
+        Save -  to save event (no post)
+        Save and Post (save event and post)
+        Post (if event saved, just post it)
+
+        Once event is saved and posted, popup displayed: You can share event by the link.
+
+EPIC Menu
+    Trending
+    Profile
+    My Events
+        Orginized by me (all events orginized by user)
+            List of events: event name, location, date, participants coun
+                Manage Event
+                    Edit
+                    Cancel
+                    Send update
+                    Share
+                    Print (with QR code)
+
+        Participate in (all events where user takes participation)
+            View
+            Un-subscribe
+            Share
+            Print (with QR code)
